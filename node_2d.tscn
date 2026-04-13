@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://w5pmb4tcgkcm"]
+
+[ext_resource type="Script" uid="uid://b538mkd6off4r" path="res://node_2d.gd" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://det3c0rbh8ftq" path="res://click.gd" id="2_epypp"]
+
+[node name="Main" type="Node2D" unique_id=1814649856]
+script = ExtResource("1_0e48y")
+
+[node name="Sad" type="Label" parent="." unique_id=1624899412]
+offset_left = 7.0
+offset_top = 50.0
+offset_right = 53.0
+offset_bottom = 73.0
+theme_override_font_sizes/font_size = 45
+text = "Sad: 0"
+
+[node name="Happy" type="Label" parent="." unique_id=1749501395]
+offset_left = -1.0
+offset_top = 107.0
+offset_right = 188.0
+offset_bottom = 171.0
+theme_override_font_sizes/font_size = 45
+text = "Happy: 0"
+
+[node name="Click" type="Button" parent="." unique_id=484673244]
+offset_left = 209.0
+offset_top = -1.0
+offset_right = 861.0
+offset_bottom = 260.0
+text = "Click me"
+script = ExtResource("2_epypp")
+
+[connection signal="pressed" from="Click" to="Click" method="_on_pressed"]
